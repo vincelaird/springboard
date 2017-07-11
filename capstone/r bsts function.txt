@@ -1,0 +1,74 @@
+createResultsDf <- function(file, gamesForEval, hours) {
+
+# define results frame
+dfResults <-  data.frame(Game=integer(),LastOdds=integer(),Count=integer(),Mean=integer(),Now=integer(),Wait=integer(),NowPct=numeric(),Result=integer(),stringsAsFactors=FALSE)
+
+# load file
+df <- read_excel(file)
+
+# determine number of games per team and game start time
+dfGames <- df %>% group_by(Game) %>% summarise(Date = max(Date))
+
+# this evaluates each game
+# if number of MCMC draws have odds value higher than x hours prior...
+# wait, otherwise bet now
+for (game in seq_len(nrow(dfGames))) {
+  if (game < gamesForEval + 1) {
+    tblSlice <- subset(df, Date <= dfGames[game,2] - dhours(hours))
+    tblSliceFull <- subset(df, Date <= dfGames[game,2])
+    oddsSlice <- tblSlice$Odds
+    results <- evalbsts(oddsSlice, hours)
+    dfResults[game, 1] <- game
+    dfResults[game, 2] <- tail(oddsSlice,n=1)
+    dfResults[game, 3] <- length(results)
+    dfResults[game, 4] <- mean(results)
+    dfResults[game, 5] <- sum(results>tail(oddsSlice,n=1))
+    dfResults[game, 6] <- sum(results<tail(oddsSlice,n=1))
+    dfResults[game, 7] <- dfResults[game, 5] / dfResults[game, 3]
+    if (dfResults[game, 7] > .5)
+      { dfResults[game, 8] <- tail(tblSlice$Odds,n=1) - tail(tblSliceFull$Odds,n=1) } 
+      else 
+      { dfResults[game, 8] <- tail(tblSliceFull$Odds,n=1) - tail(tblSlice$Odds,n=1) }
+  } else {
+    tblSlice <- subset(df, Date <= dfGames[game,2] - dhours(hours) & Date > dfGames[game-gamesForEval,2])
+    tblSliceFull <- subset(df, Date <= dfGames[game,2])
+    oddsSlice <- tblSlice$Odds
+    results <- evalbsts(oddsSlice, hours)
+    dfResults[game, 1] <- game
+    dfResults[game, 2] <- tail(oddsSlice,n=1)
+    dfResults[game, 3] <- length(results)
+    dfResults[game, 4] <- mean(results)
+    dfResults[game, 5] <- sum(results>tail(oddsSlice,n=1))
+    dfResults[game, 6] <- sum(results<tail(oddsSlice,n=1))
+    dfResults[game, 7] <- dfResults[game, 5] / dfResults[game, 3]
+    if (dfResults[game, 7] > .5)
+      { dfResults[game, 8] <- tail(tblSlice$Odds,n=1) - tail(tblSliceFull$Odds,n=1) } 
+      else 
+      { dfResults[game, 8] <- tail(tblSliceFull$Odds,n=1) - tail(tblSlice$Odds,n=1) }
+  }
+}
+
+return(dfResults)
+}
+
+# function to perform bsts analysis and return results
+
+evalbsts <- function(df, hours) {
+
+# smooth data
+df <- HoltWinters(df, alpha=0.1, gamma=FALSE)
+
+# run bsts model
+ss <- AddSemilocalLinearTrend(list(), df$fitted[, 1])
+bsts.model <- bsts(df$fitted[, 1], state.specification = ss, niter = 200)
+
+# predict
+p <- predict.bsts(bsts.model, horizon = hours * 60, quantiles = c(.025, .975))
+
+# only interested in the final distribution
+results <- p$distribution[,ncol(p$distribution)]
+
+# result
+return(results)
+
+}
