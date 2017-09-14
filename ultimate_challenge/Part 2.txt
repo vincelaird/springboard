@@ -1,0 +1,17 @@
+A key measure of success would be dependent on what is more important: driver satisfaction, customer satisfaction, or minimized cost of toll fees.
+
+The best case would be increased satisfaction by both drivers and customers, accompanied by low (or no) toll fees.
+
+To start, toll fees are zero.  Driver and customer satisfaction may not be known, but idle times by drivers (or times when drivers are not earning) can be measured, as can wait times of customers.
+
+Goal would be to decrease idle times by drivers (or increase driver earnings, or earning-per-time measurement) and decrease wait time by customers, while keeping toll fees as close to zero as possible.
+
+If drivers are being asked to serve both cities, I may look at historical wait times for customers prior to toll reinbursement at different days/times, and compare to wait times after tolls are being reinbursed.  If drivers are serving both cities, wait times should decrease.
+
+A practical experiment would involve determining a budget for toll fees, estimating how to stay within that budget, and then allocating times when tolls will be reinbursed.  An example would be: Saturday, between the hours of x and y, tolls will be reinbursed.  Then examine wait times between these hours.
+
+Statistical tests would include measuring before and after wait times and driver efficiency (in terms of earnings-per-hour metrics).
+
+Interpreting the results would involve tracking and measuring the metrics before and after the experiment: does driver profitability (to the company) increase due to the experiment?  Are wait times decreasing?  Are toll fees staying within budget?
+
+Caveats would include assumptions that toll fees may increase as drivers become more aware of the toll reinbursement plan and potential increase in customers if it becomes known that service times have decreased substantially, due to the increased pool of drivers (if drivers are now servicing both cities).
