@@ -39,6 +39,17 @@ Used inferential statistics and hypothesis testing to elicit insights from data 
 * [Racial discrimination](https://github.com/vincelaird/springboard/blob/master/racial_disc/sliderule_dsi_inferential_statistics_exercise_2.ipynb) - analysis to establish whether race has a significant impact on the rate of callbacks for resumes.
 * [Reduction in hospital readmissions](https://github.com/vincelaird/springboard/blob/master/hospital_readmit/sliderule_dsi_inferential_statistics_exercise_3.ipynb) - critique of analysis of data and recommendations for reducing hospital readmissions rate.
 
+## Machine learning
+
+placeholder
+
+### Linear and logistic regression
+
+placeholder
+
+* [Linear regression using Boston housing data set](https://github.com/vincelaird/springboard/blob/master/linear_regression/Mini_Project_Linear_Regression_complete.ipynb) - Linear regression models, predictions, re-sampling methods, train-test and cross validation.
+* [Heights and weights using logistic regression]() - 
+
 --- IGNORE EVERYTHING BELOW THIS LINE ---
 
 ### Prerequisites
