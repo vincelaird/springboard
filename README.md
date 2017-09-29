@@ -29,15 +29,15 @@ Telling stories with data, including exploration, communication and presentation
 
 ## Inferential statistics
 
-placeholder
+Introduction to statistical inference, hypothesis testing, regression and correlation and their applications such as in A/B testing.
 
 ### Exploratory data analysis projects
 
-placeholder
+Used inferential statistics and hypothesis testing to elicit insights from data and create data stories.
 
 * [Human body temperature](https://github.com/vincelaird/springboard/blob/master/human_temp/sliderule_dsi_inferential_statistics_exercise_1.ipynb) - analysis of human body temperatures and the concepts of hypothesis testing, confidence intervals, and statistical significance.
 * [Racial discrimination](https://github.com/vincelaird/springboard/blob/master/racial_disc/sliderule_dsi_inferential_statistics_exercise_2.ipynb) - analysis to establish whether race has a significant impact on the rate of callbacks for resumes.
-* [Reduction in hospital readmissions]() - 
+* [Reduction in hospital readmissions](https://github.com/vincelaird/springboard/blob/master/hospital_readmit/sliderule_dsi_inferential_statistics_exercise_3.ipynb) - critique of analysis of data and recommendations for reducing hospital readmissions rate.
 
 --- IGNORE EVERYTHING BELOW THIS LINE ---
 
