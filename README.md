@@ -36,7 +36,8 @@ placeholder
 placeholder
 
 * [Human body temperature](https://github.com/vincelaird/springboard/blob/master/human_temp/sliderule_dsi_inferential_statistics_exercise_1.ipynb) - analysis of human body temperatures and the concepts of hypothesis testing, confidence intervals, and statistical significance.
-* [Racial Discrimination]()
+* [Racial discrimination](https://github.com/vincelaird/springboard/blob/master/racial_disc/sliderule_dsi_inferential_statistics_exercise_2.ipynb) - analysis to establish whether race has a significant impact on the rate of callbacks for resumes.
+* [Reduction in hospital readmissions]() - 
 
 --- IGNORE EVERYTHING BELOW THIS LINE ---
 
