@@ -31,6 +31,13 @@ Telling stories with data, including exploration, communication and presentation
 
 placeholder
 
+### Exploratory data analysis projects
+
+placeholder
+
+* [Human body temperature](https://github.com/vincelaird/springboard/blob/master/human_temp/sliderule_dsi_inferential_statistics_exercise_1.ipynb) - analysis of human body temperatures and the concepts of hypothesis testing, confidence intervals, and statistical significance.
+* [Racial Discrimination]()
+
 --- IGNORE EVERYTHING BELOW THIS LINE ---
 
 ### Prerequisites
