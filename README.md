@@ -95,7 +95,7 @@ Recommendation systems, anomaly detection, time series analysis and basic neural
 
 Recommendation systems are use by Amazon, Netflix, Facebook and Twitter to recommend content a user might like; this portion of the course shows an introduction to how they work.
 
-* [Minimal recommendation engine](https://github.com/vincelaird/springboard/blob/master/pycon2015_tutorial322/pycon.ipynb) - overview of Numpy and Pandas and how to use both to build a minimal recommendation engine, using the MovieLens 1M dataset, which contains 1 million ratings collected from 6000 users on 4000 movies.
+* [Minimal recommendation engine](https://github.com/vincelaird/springboard/blob/master/pycon2015_tutorial322/pycon.ipynb) - overview of Numpy and Pandas and how to use both to build a minimal recommendation engine, using the MovieLens 1M dataset, which contains 1 million ratings collected from 6,000 users on 4,000 movies.
 * [Reco systems evaluation methods](https://github.com/vincelaird/springboard/blob/master/pycon2015_tutorial322/questions.ipynb) - implementation of collaborative functions to evaluate results of the minimal recommendation engine.
 
 ### Time series
