@@ -68,7 +68,7 @@ Sports betting odds change throughout the day; this capstone project set out to 
 
 ### Data wrangling
 
-* [Data from past and present, an overview](https://github.com/vincelaird/springboard/blob/master/capstone/Data-wrangling.pdf) - brief summary of where historical odds are found, and where current odds can be collected.
+* [Data from past and present, an overview](https://github.com/vincelaird/springboard/blob/master/capstone/Data-wrangling.pdf) - brief summary of where historical odds are found, and where current odds will be collected.
 * [Data collection web app](https://github.com/vincelaird/ds-mlb) - Node.js app to collect MLB odds every minute.
 
 ### Data storytelling
